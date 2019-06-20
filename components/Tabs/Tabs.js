@@ -61,3 +61,9 @@ links = document.querySelectorAll(".tabs-link");
 links.forEach(link => {
   return new TabLink(link);
 });
+
+$(".tabs-item-title").click(function() {
+  $(".tabs-item-description").fadeIn("slow", function() {
+    // Animation complete
+  });
+});

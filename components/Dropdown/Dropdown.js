@@ -10,9 +10,9 @@ class Dropdown {
     this.content = this.element.querySelector(".dropdown-content");
 
     // Add a click handler to the button reference and call the toggleContent method.
-    this.button.addEventListener("click", () => {
-      return this.toggleContent();
-    });
+    //this.button.addEventListener("click", () => {
+    //return this.toggleContent();
+    //});
   }
 
   toggleContent() {
@@ -25,3 +25,19 @@ class Dropdown {
 let dropdowns = document
   .querySelectorAll(".dropdown")
   .forEach(dropdown => new Dropdown(dropdown));
+
+// STRETCH DROPDOWN
+
+$(".dropdown-button").click(function() {
+  $(".dropdown-content").animate(
+    {
+      left: "0",
+      width: "toggle",
+      height: "toggle"
+    },
+    2000,
+    function() {
+      // Animation complete.
+    }
+  );
+});
